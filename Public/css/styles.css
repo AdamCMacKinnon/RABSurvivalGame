@@ -1,0 +1,88 @@
+.header {
+    height: 200px;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+}
+
+#headertext {
+    color: white;
+    padding: 10px;
+}
+
+.z10 {
+    z-index: 10;
+}
+
+.z15 {
+    z-index: 15;
+}
+
+.z20 {
+    z-index: 20;
+}
+
+.opacity {
+    opacity: .7;
+
+}
+.headerimage {
+
+    height: 200px;
+    width: 400px;
+    
+
+}
+.teamSelect {
+    margin-top: 10px;
+}
+
+#signOutButton {
+    float: right;
+}
+
+.previousPicks {
+    margin-top: 50px;
+}
+
+.pastTeams {
+    padding: 5px;
+    list-style: none;
+}
+
+.RABlogo {
+    display: flex;
+    justify-content: center;
+}
+
+.logincontainer {
+    background-color: black;
+}
+
+.logintext {
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+}
+
+.loginButton {
+    background-color: #1DA1F2;
+    color: white;
+    justify-content: center;
+}
+
+.GoogleButton {
+    background-color: #DB4437;
+    color: white;
+    justify-content: center;
+}
+
+.loginBottom {
+    background-color: rgb(124, 124, 124);
+}
+
+.bottomText {
+    margin-top: 20px;
+}

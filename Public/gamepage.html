@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>RAB Survival Game</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="header position-relative top">
+      <div class="position-absolute top text-white h-100 w-100 d-flex flex-column justify-content-center p-5"></div>
+      <div id="headertext" class="display-3 text-z20">RAB Survival Game</div>
+    </div>
+<!-- END OF HEADER -->
+<!-- START OF NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="https://www.romanticaboutbaseball.com"><img height="40px"src="/public/images/RAB Heart JPG_Dk BG.jpg" alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.patreon.com/romanticaboutbaseball" target="__blank">Support RAB</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Twitter Links
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="https://www.twitter.com/passonjim" target="__blank">Jim Passon Jr.</a>
+          <a class="dropdown-item" href="https://www.twitter.com/AdamCMacK"target="__blank">Adam C. MacKinnon</a>
+          <a class="dropdown-item" href="#"target="__blank">MLB Survivor Game</a>
+        </div>
+      </li>
+    </ul>
+    <button class="btn btn-sm btn-outline-secondary ml-auto nav-item" type="button">Sign Out</button>
+  </div>
+</nav>
+<!-- END OF NAVBAR -->
+<div class="container">
+  <div class="teamSelect">
+    <h4>SELECT YOUR TEAM:</h4>
+    <form id="submission" action="" method="POST">
+  <input list="teams">
+      <datalist id="teams">
+        <option value="Arizona Diamondbacks">
+        <option value="Atlanta Braves">
+        <option value="Baltimore Orioles">
+        <option value="Boston Red Sox">
+        <option value="Chicago Cubs">
+        <option value="Chicago White Sox">
+        <option value="Cincinnati Reds">
+        <option value="Colorado Rockies">
+        <option value="Cleveland Indians">
+        <option value="Detroit Tigers">
+        <option value="Houston Astros">
+        <option value="Kansas City Royals">
+        <option value="Los Angeles Angels">
+        <option value="Los Angeles Dodgers">
+        <option value="Miami Marlins">
+        <option value="Milwaukee Brewers">
+        <option value="Minnesota Twins">
+        <option value="New York Mets">
+        <option value="New York Yankees">
+        <option value="Oakland A's">
+        <option value="Philadelphia Phillies">
+        <option value="Pittsburgh Pirates">
+        <option value="San Diego Padres">
+        <option value="San Francisco Giants">
+        <option value="Seattle Mariners">
+        <option value="St. Louis Cardinals">
+        <option value="Tampa Bay Rays">
+        <option value="Texas Rangers">
+        <option value="Toronto Blue Jays">
+        <option value="Washington Nationals">
+      </datalist>
+<input type="submit">
+    </form>
+  </div>
+  <div class="previousPicks">
+    <h5>Your Previous Selections:</h5>
+    <ul class="pastTeams">
+      <li>WEEK 1:</li>
+      <li>WEEK 2:</li>
+      <li>WEEK 3:</li>
+      <li>WEEK 4:</li>
+      <li>WEEK 5:</li>
+
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+<script src="/public/js/app.js"></script>
+<!-- FIREBASE CODE -->
+<script src="/__/firebase/8.2.3/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.2.3/firebase-analytics.js"></script>
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+
+<!-- BOOSTRAP CODE -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
