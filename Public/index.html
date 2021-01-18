@@ -16,21 +16,48 @@
           <div class="logintext">
               <h3>Welcome to the MLB Survival Game</h3>
           </div>
-          <div class="loginButton">
-            <button type="button" class="btn btn-lg btn-block">Login With Twitter</button>
+          <div class="TwitterButton">
+            <button id="TwitterButton"type="button" class="btn btn-lg btn-block">Login With Twitter</button>
           </div>
-          <div class="GoogleButton">
-            <button type="button" class="btn btn-lg btn-block">Login With Google</button>
+          <!-- <div  class="GoogleButton">
+            <button id="GoogleButton" type="button" class="btn btn-lg btn-block">Login With Google</button> -->
 
           </div>
       </div>
     <div class="LoginBottom">
-        <p class="bottomText">Devised by stat guru <a href="https://www.twitter.com/passonjim">Jim Passon Jr.</a>, the RAB Survival game follows the formula of NFL Survival games,
+        <p class="bottomText">Devised by stat guru <a href="https://www.twitter.com/passonjim" target="__blank">Jim Passon Jr.</a>, the RAB Survival game follows the formula of NFL Survival games,
         where you pick a team for a week.  If that team scores more runs than their opponents, you advance!  They get outscored, you are eliminated.<br> Can you Survive?</p> 
         <p>Complete List of Rules</p>
         
     </div>
 
+<!-- FIREBASE CODE: -->
+<script src="/public/js/config.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+
+<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+<script>
+const firebaseConfig = {
+    apiKey: firebaseKey,
+    authDomain: "rabsurvivalgame.firebaseapp.com",
+    projectId: "rabsurvivalgame",
+    storageBucket: "rabsurvivalgame.appspot.com",
+    messagingSenderId: "714861487579",
+    appId: "1:714861487579:web:f7f48487179fdf7b4ab3fe",
+    measurementId: "G-W3833CRT4E"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+</script>
+<!-- END FIREBASE CODE -->
+<script src="/public/js/app.js"></script>
+</body>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

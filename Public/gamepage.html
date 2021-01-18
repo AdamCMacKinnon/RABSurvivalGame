@@ -40,11 +40,12 @@
         </div>
       </li>
     </ul>
-    <button class="btn btn-sm btn-outline-secondary ml-auto nav-item" type="button">Sign Out</button>
+    <button id="signOutButton" class="btn btn-sm btn-outline-secondary ml-auto nav-item" type="button">Sign Out</button>
   </div>
 </nav>
 <!-- END OF NAVBAR -->
 <div class="container">
+  <div id="userDetails"></div><br>
   <div class="teamSelect">
     <h4>SELECT YOUR TEAM:</h4>
     <form id="submission" action="" method="POST">
@@ -101,16 +102,33 @@
 
 
 
-<script src="/public/js/app.js"></script>
-<!-- FIREBASE CODE -->
-<script src="/__/firebase/8.2.3/firebase-app.js"></script>
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/8.2.3/firebase-analytics.js"></script>
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
+<!-- FIREBASE CODE: -->
+<!-- FIREBASE CODE: -->
+<script src="/public/js/config.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
 
+<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
 
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+<script>
+const firebaseConfig = {
+    apiKey: firebaseKey,
+    authDomain: "rabsurvivalgame.firebaseapp.com",
+    projectId: "rabsurvivalgame",
+    storageBucket: "rabsurvivalgame.appspot.com",
+    messagingSenderId: "714861487579",
+    appId: "1:714861487579:web:f7f48487179fdf7b4ab3fe",
+    measurementId: "G-W3833CRT4E"
+  };
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+</script>
+<script src="/public/js/gamepage.js"></script>
+<!-- END FIREBASE CODE -->
 <!-- BOOSTRAP CODE -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
