@@ -49,7 +49,7 @@
   <div class="teamSelect">
     <h4>SELECT YOUR TEAM:</h4>
     <form id="submission" action="" method="POST">
-  <input list="teams">
+  <!-- <input list="teams">
       <datalist id="teams">
         <option value="Arizona Diamondbacks">
         <option value="Atlanta Braves">
@@ -81,7 +81,10 @@
         <option value="Texas Rangers">
         <option value="Toronto Blue Jays">
         <option value="Washington Nationals">
-      </datalist>
+      </datalist><br> -->
+      <input id="teams" type="text"><br>
+      CONFIRM TWITTER (no @): <br>
+      <input id="twitter" type="text"><br>
 <input type="submit">
     </form>
   </div>
@@ -126,6 +129,8 @@ const firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
   const auth = firebase.auth();
+  const db= firebase.firestore();
+  db.settings({timestampsInSnapshots: true});
 </script>
 <script src="/public/js/gamepage.js"></script>
 <!-- END FIREBASE CODE -->

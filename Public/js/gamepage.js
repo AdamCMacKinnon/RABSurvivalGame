@@ -15,8 +15,20 @@ auth.onAuthStateChanged(user =>{
 })
 
 // TEAM SELECT FORM TO DATABASE
+db.collection('TeamSelections');
+const submission = document.getElementById('submission');
 
-
+submission.addEventListener('submit',(e) => {
+    e.preventDefault();
+    let userId = `${submission.twitter.value}`;
+    db.collection("TeamSelections").doc(userId).set({
+        team : submission.teams.value,
+        twitter: submission.twitter.value
+    })
+    .then(function(){
+        console.log("submission received!");
+    })
+})
 
 
 
