@@ -15,21 +15,40 @@ auth.onAuthStateChanged(user =>{
 })
 
 // TEAM SELECT FORM TO DATABASE
-db.collection('TeamSelections');
+db.collection('week1');
+//DB collection changes week to week.  This allows for authentication of picks
 const submission = document.getElementById('submission');
 
 submission.addEventListener('submit',(e) => {
     e.preventDefault();
-    let userId = `${submission.twitter.value}`;
-    db.collection("TeamSelections").doc(userId).set({
+    let userId = `${submission.twitter.value }`;
+    db.collection("week1").doc(userId).set({
         team : submission.teams.value,
         twitter: submission.twitter.value
     })
     .then(function(){
         console.log("submission received!");
+    let docRef = db.collection('week1').doc(userId);
+
+    docRef.get().then(function(doc) {
+        if (doc.exists) {
+            localStorage.setItem('currentUser',JSON.stringify(doc.data()));
+            console.log('User Selection:', doc.data());
+        } else {
+            console.log('ERROR inputting user Selection');
+        }
+    })
     })
 })
 
+//DISPLAY USER SELECTIONS ON SCREEN
+
+const currentUser = localStorage.getItem('currentUser');
+const currentUserObj = JSON.parse(currentUser);
+var currentTeam = db.collection('week1').doc(currentUserObj.team);
+const currentPick = document.getElementById('currentPick');
+
+currentPick.innerHTML = `<h5>Your Current Pick: ${JSON.stringify(currentUserObj.team)}</h5>`
 
 
 
@@ -37,4 +56,5 @@ submission.addEventListener('submit',(e) => {
 
 
 
-// USER DETAILS POPULATE ON PAGE
+
+
