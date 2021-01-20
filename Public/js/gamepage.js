@@ -21,14 +21,15 @@ const submission = document.getElementById('submission');
 
 submission.addEventListener('submit',(e) => {
     e.preventDefault();
-    let userId = `${submission.twitter.value }`;
+    let userId = `${submission.twitter.value.toLowerCase() }`;
     db.collection("week1").doc(userId).set({
         team : submission.teams.value,
-        twitter: submission.twitter.value
+        twitter: submission.twitter.value.toLowerCase()
     })
     .then(function(){
         console.log("submission received!");
     let docRef = db.collection('week1').doc(userId);
+    
 
     docRef.get().then(function(doc) {
         if (doc.exists) {
