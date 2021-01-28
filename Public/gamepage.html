@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <div class="header position-relative top">
-      <div class="position-absolute top text-white h-100 w-100 d-flex flex-column justify-content-center p-5"></div>
-      <div id="headertext" class="display-3 text-z20">RAB Survival Game</div>
+    <div class="gamepagecontainer">
+      <div class="RABlogo"><img src="/public/images/RAB JPG_Black BG.jpg" height="400px"alt=""></div>
+        <div class="logintext">
+
     </div>
 <!-- END OF HEADER -->
 <!-- START OF NAVBAR -->
@@ -83,14 +84,21 @@
         <option value="Washington Nationals">
       </datalist><br> -->
       <input id="teams" type="text"><br>
-      CONFIRM TWITTER (no @): <br>
-      <input id="twitter" type="text"><br>
-<input type="submit">
+      <h4>CONFIRM TWITTER (no @):</h4>
+      <input id="twitter" type="text" style="padding-top: 5px;"><br><br>
+<input type="submit" id="submitButton">
     </form>
   </div>
-  <div id="currentPick">
+  <div id="currentPick" style="padding-top: 20px;">
   </div>
 </div>
+<div class="submitModal">
+  <div class="modal-content">
+    <h4>Your Submission has been recorded.</h4>
+    <a href="gamepage.html" style="color: blue;">close</a>
+  </div>
+</div>
+
 
 
 

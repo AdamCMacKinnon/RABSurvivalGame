@@ -3,6 +3,7 @@
 const signOutButton = document.getElementById('signOutButton');
 const userDetails = document.getElementById('userDetails');
 
+
 signOutButton.onclick = () => auth.signOut();
 
 auth.onAuthStateChanged(user =>{
@@ -39,6 +40,13 @@ submission.addEventListener('submit',(e) => {
             console.log('ERROR inputting user Selection');
         }
     })
+    })
+})
+
+document.getElementById('submitButton').addEventListener('click', () => {
+    document.querySelector('.submitModal').style.display = 'flex';
+    document.querySelector('.body').addEventListener('click', () => {
+        document.querySelector('.submitModal').style.display = 'none';
     })
 })
 
