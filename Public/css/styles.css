@@ -116,3 +116,8 @@
     padding-top: 20px;
     align-items: center;
 }
+
+.GameRules {
+    background-color: white;
+    padding: 5px;
+}

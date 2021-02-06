@@ -1,12 +1,16 @@
-# RABSurvivalGame
+The RAB (Romantic About Baseball) Survival Game:
+
+Concept by stat guru Jim Passon Jr.
+Programmed by Adam C. MacKinnon
+
+<img src="/public/images/RAB JPG_black BG.jpg">
+
+The RAB Survival Game is the only game of it's kind for professional baseball.  The conccept is simple:
+
+1.  Select a team for each week in the regular season.
+2.  If your team outscores it's combined opponents, you advance.  They don't?  You're eliminated.
+3.  You can only pick a team once during the season.
 
 
-1/18/21 STATUS:
-DESIGN:
-- Design still very basic on game page.
-- User's current selection displays beneath submission.  Would like to have previous selections as well.
-LOGIC:
-- Database should be separate collections by week "week1, week2, etc.." and exported every week to Jim for auditing.
-- maybe have another statement populate how many users are currently active?
-- When user eliminated, their account is just disabled (prevents login).  Disabling done after Jim audit.
-- check with twitter API to see if auto DM can be sent out to user upon disabling account.
+
+
