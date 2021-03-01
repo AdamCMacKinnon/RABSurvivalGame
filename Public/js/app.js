@@ -18,5 +18,4 @@ auth.onAuthStateChanged(user =>{
     }else {
         auth.signOut();
     }
-
 })
