@@ -3,7 +3,7 @@ The RAB (Romantic About Baseball) Survival Game:
 Concept by stat guru Jim Passon Jr.
 Programmed by Adam C. MacKinnon
 
-<img src="public/images/loginscreen.jpg" alt="" style="height: 80px;">
+<img src="public/images/loginscreen.jpg" alt="" height="100px;">
 
 The RAB Survival Game is the only game of it's kind for professional baseball.  The conccept is simple:
 
