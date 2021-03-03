@@ -121,3 +121,11 @@
     background-color: white;
     padding: 5px;
 }
+
+.footer {
+    position: relative;
+    background-color: darkgreen;
+    text-align: center;
+    color: white;
+
+}
