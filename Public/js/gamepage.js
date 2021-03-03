@@ -25,7 +25,7 @@ submission.addEventListener('submit',(e) => {
     let userId = `${submission.twitter.value.toLowerCase() }`;
     db.collection("week1").doc(userId).set({
         team : submission.teams.value,
-        twitter: submission.twitter.value.toLowerCase()
+        // twitter: submission.twitter.value.toLowerCase()
     })
     .then(function(){
         console.log("submission received!");
