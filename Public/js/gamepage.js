@@ -16,20 +16,21 @@ auth.onAuthStateChanged(user =>{
 })
 
 // TEAM SELECT FORM TO DATABASE
-db.collection('week1');
+db.collection('PRODUCTION');
 //DB collection changes week to week.  This allows for authentication of picks
 const submission = document.getElementById('submission');
 
 submission.addEventListener('submit',(e) => {
     e.preventDefault();
     let userId = `${submission.twitter.value.toLowerCase() }`;
-    db.collection("week1").doc(userId).set({
+    db.collection("PRODUCTION").doc(userId).set({
         team : submission.teams.value,
+        week : submission.week.value
         // twitter: submission.twitter.value.toLowerCase()
     })
     .then(function(){
         console.log("submission received!");
-    let docRef = db.collection('week1').doc(userId);
+    let docRef = db.collection('PRODUCTION').doc(userId);
     
 
     docRef.get().then(function(doc) {
@@ -54,7 +55,7 @@ document.getElementById('submitButton').addEventListener('click', () => {
 
 const currentUser = localStorage.getItem('currentUser');
 const currentUserObj = JSON.parse(currentUser);
-var currentTeam = db.collection('week1').doc(currentUserObj.team);
+var currentTeam = db.collection('PRODUCTION').doc(currentUserObj.team);
 const currentPick = document.getElementById('currentPick');
 
 currentPick.innerHTML = `<h5>Your Current Pick: ${JSON.stringify(currentUserObj.team)}</h5>`

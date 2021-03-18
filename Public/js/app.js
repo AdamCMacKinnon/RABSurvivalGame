@@ -9,7 +9,7 @@ var twitter= new firebase.auth.TwitterAuthProvider();
 
 
 
-// googleButton.onclick = () => auth.signInWithPopup(google);
+
 twitterButton.onclick = () => auth.signInWithPopup(twitter);
 
 auth.onAuthStateChanged(user =>{
