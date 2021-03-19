@@ -4,6 +4,7 @@ const signOutButton = document.getElementById('signOutButton');
 const userDetails = document.getElementById('userDetails');
 
 
+
 signOutButton.onclick = () => auth.signOut();
 
 auth.onAuthStateChanged(user =>{
@@ -22,7 +23,7 @@ const submission = document.getElementById('submission');
 
 submission.addEventListener('submit',(e) => {
     e.preventDefault();
-    let userId = `${submission.twitter.value.toLowerCase() }`;
+    let userId = `${submission.twitter.value.toLowerCase()}` + `${submission.week.value}`;
     db.collection("PRODUCTION").doc(userId).set({
         team : submission.teams.value,
         week : submission.week.value
@@ -44,6 +45,8 @@ submission.addEventListener('submit',(e) => {
     })
 })
 
+
+
 document.getElementById('submitButton').addEventListener('click', () => {
     document.querySelector('.submitModal').style.display = 'flex';
     document.querySelector('.body').addEventListener('click', () => {
@@ -59,6 +62,40 @@ var currentTeam = db.collection('PRODUCTION').doc(currentUserObj.team);
 const currentPick = document.getElementById('currentPick');
 
 currentPick.innerHTML = `<h5>Your Current Pick: ${JSON.stringify(currentUserObj.team)}</h5>`
+
+const prevPicks = document.getElementById('prevPicks');
+//list previous picks on screen
+
+// const getPick = async() =>{
+//     let response = await db.collection('PRODUCTION').doc(`${submission.twitter.value} + ${submission.week.value}`).get()
+//     let data = await response
+//     return data
+// }
+// let pick = getPick()
+// console.log(pick)
+// 
+let docRef = db.collection("PRODUCTION").doc("rmntcbaseball");
+console.log(docRef)
+
+docRef.get().then((doc) => {
+    if (doc.exists) {
+        localStorage.setItem('pastPicks', JSON.stringify(doc.data()));
+        console.log("Document data:", doc.data());
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+}).catch((error) => {
+    console.log("Error getting document:", error);
+});
+
+const pastPicks = localStorage.getItem('pastPicks');
+const pastPicksObj = JSON.parse(pastPicks)
+console.log(pastPicksObj)
+
+
+prevPicks.innerHTML = `<li>Week ${pastPicksObj.week}: ${pastPicksObj.team}</li>`
+
 
 
 

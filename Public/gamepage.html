@@ -47,15 +47,52 @@
 <!-- END OF NAVBAR -->
 <div class="container">
   <div id="userDetails"></div><br>
+  <div class="prevPicksBox" >
+<ul id="prevPicks">
+  
+</ul>
+  </div>
   <div class="teamSelect">
     <h4>SELECT YOUR TEAM:</h4>
     <form id="submission" action="" method="POST">
-      <input id="teams" type="text" placeholder="ex: Atlanta Braves"><br><br>
+      <!-- <input id="teams" type="text" placeholder="ex: Atlanta Braves"><br><br> -->
+      <select name="teams" id="teams">
+        <option value="Diamondbacks">Arizona Diamondbacks</option>
+        <option value="Braves">Atlanta Braves</option>
+        <option value="Orioles">Baltimore Orioles</option>
+        <option value="RedSox">Boston Red Sox</option>
+        <option value="WhiteSox">Chicago White Sox</option>
+        <option value="Cubs">Chicago Cubs</option>
+        <option value="Reds">Cincinnati Reds</option>
+        <option value="Indians">Cleveland Baseball Team</option>
+        <option value="Rockies">Colorado Rockies</option>
+        <option value="Tigers">Detroit Tigers</option>
+        <option value="Astros">Houston Astros</option>
+        <option value="Royals">Kansas City Royals</option>
+        <option value="Angels">Los Angeles Angels</option>
+        <option value="Dodgers">Los Angeles Dodgers</option>
+        <option value="Marlins">Miami Marlins</option>
+        <option value="Brewers">Milwaukee Brewers</option>
+        <option value="Twins">Minnesota Twins</option>
+        <option value="Yankees">New York Yankees</option>
+        <option value="Mets">New York Mets</option>
+        <option value="Athletics">Oakland Athletics</option>
+        <option value="Phillies">Philadelphia Phillies</option>
+        <option value="Pirates">Pittsburgh Pirates</option>
+        <option value="Padres">San Diego Padres</option>
+        <option value="Giants">San Francisco Giants</option>
+        <option value="Mariners">Seattle Mariners</option>
+        <option value="Cardinals">St. Louis Cardinals</option>
+        <option value="Rays">Tampa Bay Rays</option>
+        <option value="Rangers">Texas Rangers</option>
+        <option value="BlueJays">Toronto Blue Jays</option>
+        <option value="Nationals">Washington Nationals</option>
+      </select>
       <h4>CONFIRM TWITTER (no @):</h4>
       <input id="twitter" type="text" style="padding-top: 5px;" placeholder="ex: RMNTCBASEBALL"><br><br>
       <label for="week">WEEK:</label>
       <select name="week" id="weekSelect">
-        <option value="1">1 (April 1st - April 11th</option>
+        <option value="1">1 (April 1st - April 11th (Opening Week)</option>
         <option value="2">2 (April 12th - April 18th </option>
         <option value="3">3 (April 19th - April 25th)</option>
         <option value="4">4 (April 26th - May 2nd)</option>
@@ -90,12 +127,11 @@
 <div class="submitModal">
   <div class="modal-content">
     <h4>Your Submission has been recorded.</h4>
-    <a href="gamepage.html" style="color: blue;">close</a>
+    <a href="gamepage.html" style="color: red;">close</a>
   </div>
 </div>
 
 <footer class="footer col-12 ">Romantic About Baseball © 2021</footer>
-
 
 
 
@@ -127,7 +163,9 @@ const firebaseConfig = {
   const db= firebase.firestore();
   db.settings({timestampsInSnapshots: true});
 </script>
-<script src="js/gamepage.js"></script>
+
+
+
 <!-- END FIREBASE CODE -->
 <!-- BOOSTRAP CODE -->
     <!-- Optional JavaScript -->
@@ -135,5 +173,9 @@ const firebaseConfig = {
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/gamepage.js"></script>
+    <script>
+      
+    </script>
   </body>
 </html>
