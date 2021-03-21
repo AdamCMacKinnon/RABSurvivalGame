@@ -45,17 +45,21 @@
   </div>
 </nav>
 <!-- END OF NAVBAR -->
+
 <div class="container">
   <div id="userDetails"></div><br>
-  <div class="prevPicksBox" >
-<ul id="prevPicks">
-  
-</ul>
+  <div class="sheet">
+    <h3>Track Your Progress!</h3>
+  <iframe src="https://docs.google.com/spreadsheets/d/1AcStXOtASVPTkbSumbCsacO07lcKBXlZyku6gyeiA7g/edit#gid=1696585558" frameborder="0"></iframe>
+  </div>
+  <div class="prevPicksBox">
   </div>
   <div class="teamSelect">
-    <h4>SELECT YOUR TEAM:</h4>
     <form id="submission" action="" method="POST">
+      <h4>TEAM SELECTION:</h4>
       <!-- <input id="teams" type="text" placeholder="ex: Atlanta Braves"><br><br> -->
+      <h5>CONFIRM TWITTER (no @):</h5>
+      <input id="twitter" type="text" style="padding-top: 5px;" placeholder="ex: RMNTCBASEBALL"><br>
       <select name="teams" id="teams">
         <option value="Diamondbacks">Arizona Diamondbacks</option>
         <option value="Braves">Atlanta Braves</option>
@@ -87,10 +91,8 @@
         <option value="Rangers">Texas Rangers</option>
         <option value="BlueJays">Toronto Blue Jays</option>
         <option value="Nationals">Washington Nationals</option>
-      </select>
-      <h4>CONFIRM TWITTER (no @):</h4>
-      <input id="twitter" type="text" style="padding-top: 5px;" placeholder="ex: RMNTCBASEBALL"><br><br>
-      <label for="week">WEEK:</label>
+      </select><br>
+
       <select name="week" id="weekSelect">
         <option value="1">1 (April 1st - April 11th (Opening Week)</option>
         <option value="2">2 (April 12th - April 18th </option>
@@ -117,7 +119,7 @@
         <option value="23">23 (September 13th - September 19th)</option>
         <option value="24">24 (September 20th - September 26th)</option>
         <option value="25">25 (September 27th - October 3rd)</option>
-      </select>
+      </select><br>
 <input type="submit" id="submitButton">
     </form>
   </div>
@@ -130,8 +132,9 @@
     <a href="gamepage.html" style="color: red;">close</a>
   </div>
 </div>
-
-<footer class="footer col-12 ">Romantic About Baseball © 2021</footer>
+<!-- <div class="footer">
+<footer class="footer">Romantic About Baseball © 2021</footer>
+</div> -->
 
 
 
