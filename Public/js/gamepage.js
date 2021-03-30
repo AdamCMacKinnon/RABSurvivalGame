@@ -22,7 +22,7 @@ const submission = document.getElementById('submission');
 
 submission.addEventListener('submit',(e) => {
     e.preventDefault();
-    let userId = `${submission.twitter.value.toLowerCase()}` + `${submission.week.value}`;
+    let userId = `${submission.twitter.value.toLowerCase()}`;
     db.collection("PRODUCTION").doc(userId).set({
         team : submission.teams.value,
         week : submission.week.value
